@@ -1,21 +1,24 @@
-"use sctrict";
+"use strict";
 
-// const obj = {
-//     name: "Andrii",
-//     age: 24,
-//     sex: "M"
-// };
+const numberOfFilms = +prompt("How many films have you seen yet?", "5"),
+      personalMovieDB = {
 
-// console.log(obj.name, obj.age);
+    count : numberOfFilms ,
+    movies : {} ,
+    actors : [] ,
+    genres : [] ,
+    privat : false
 
-// let question = confirm("Are you here?");
+};
 
-// console.log(question);
+const firstMovie = prompt("One of the last film which did you see?", "Logan"),
+      secondMovie = prompt("One of the last film which did you see?", "Lucie"),
+      rateFirstMovie = prompt("How would you rate first movie?", "1"),
+      rateSecondMovie = prompt("How would you rate second movie?", "1");
 
-const answers = [];
+  personalMovieDB.movies[firstMovie] = rateFirstMovie;
+  personalMovieDB.movies[secondMovie] = rateSecondMovie;
+  
+  console.log(personalMovieDB);
 
-answers[0] = prompt("What is your name?", "");
-answers[1] = prompt("What old are you?", "");
-answers[2] = prompt("What is your favourite mark of car?", "");
 
-document.write(answers);
